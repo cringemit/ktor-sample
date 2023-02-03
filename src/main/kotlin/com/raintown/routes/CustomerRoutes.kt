@@ -1,4 +1,4 @@
-package com.routes
+package com.raintown.routes
 
 import com.raintown.models.Customer
 import com.raintown.models.customerStorage
@@ -12,6 +12,26 @@ import io.ktor.server.routing.delete
 import io.ktor.server.routing.get
 import io.ktor.server.routing.post
 import io.ktor.server.routing.route
+
+/**
+ * Notes
+ *
+ * Must call route(...) to define the route name and group the HTTP verbs under
+ *
+ * call.parameters is a map of query parameters to values, eg:
+ *
+ * get("{id?}") {
+ *     call.parameters["id"]
+ * }
+ *
+ *
+ * Important methods:
+ *  - call.respond
+ *  - call.respondText
+ *  - call.receive
+ *      - Will try to turn the POST body into an object of the specified type.
+ *      - Relies on serialization plugin.
+ */
 
 fun Route.customerRouting() {
     route("/customer") {

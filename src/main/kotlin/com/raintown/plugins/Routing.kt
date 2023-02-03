@@ -1,6 +1,6 @@
 package com.raintown.plugins
 
-import com.routes.customerRouting
+import com.raintown.routes.*
 import io.ktor.server.routing.*
 import io.ktor.server.application.*
 
